@@ -1,0 +1,128 @@
+.about-page{
+    margin-top: 10rem;
+    
+}
+
+.heading-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    position: relative;
+    color: #7b68ee;
+    margin-left: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #8000ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: none;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 80%;
+    left: 10%;
+    bottom: -8px;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+
+
+}
+
+.about-section {
+    width: 100%;
+    padding: 0 5%;
+    padding-bottom: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.about-container {
+    /* max-width: 1200px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    
+}
+
+
+.about-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.about-content{
+    text-align: justify;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.hidden-content{
+    display: none;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.hidden-content ul{
+    margin-top: 8px;
+}
+
+.hidden-content ul li{
+    margin-left: 10px;
+    
+}
+
+
+.showPara{
+    display: block;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+    border-radius: 30px;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+
+@media (max-width: 1055px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-content{
+        padding: 0 20px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+}

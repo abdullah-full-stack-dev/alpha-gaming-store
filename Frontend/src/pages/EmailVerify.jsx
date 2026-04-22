@@ -1,0 +1,143 @@
+import React, { useContext, useEffect } from 'react'
+import '../CSS/EmailVerify.css'
+import { AuthContext } from '../../context/AppContext'
+import { toast } from 'react-toastify'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
+export const EmailVerify = () => {
+
+    axios.defaults.withCredentials = true
+
+    const navigate = useNavigate();
+
+    const { userData, setUserData, getUserData } = useContext(AuthContext)
+
+    const inputRefs = React.useRef([])
+
+    const handleInput = (e, index) => {
+        if (e.target.value.length > 0 && index < inputRefs.current.length - 1) {
+            inputRefs.current[index + 1].focus();
+        }
+    }
+
+    const handleKeyDown = (e, index) => {
+        if (e.key === "Backspace" && e.target.value === "" && index > 0) {
+            inputRefs.current[index - 1].focus();
+        }
+    }
+
+    // const handlePaste = (e) => {
+    //     const paste = e.clipboardData.getData("text")
+    //     const pasteArray = paste.split("");
+    //     pasteArray.forEach((char, index) => {
+    //         if (inputRefs.current[index]) {
+    //             inputRefs.current[index].value = char;
+    //         }
+    //     });
+    // }
+
+    const handlePaste = (e) => {
+        e.preventDefault();
+
+        let paste = e.clipboardData.getData("text");
+
+        // ✅ remove spaces & non-numbers
+        paste = paste.replace(/\D/g, "");
+
+        const pasteArray = paste.split("");
+
+
+
+        pasteArray.forEach((char, index) => {
+            if (inputRefs.current[index]) {
+                inputRefs.current[index].value = char;
+            }
+        });
+    };
+
+    // const onSubmitHandler = async (e) => {
+    //     try {
+
+    //         e.preventDefault();
+    //         const otpArray = inputRefs.current.map(e => e.value)
+    //         const otp = otpArray.join("")
+
+    //         const { data } = await axios.post(`http://localhost:8000/alpha-gaming/verify-account`, { otp }, { withCredentials: true })
+
+    //         if (data.status === 1) {
+    //             toast.success(data.message)
+    //             getUserData()
+    //             navigate("/")
+    //         } else {
+    //             toast.error(data.message)
+    //         }
+
+    //     } catch (error) {
+    //         // toast.error(error.message)
+    //         toast.error(error.response?.data?.message || "Something went wrong");
+
+    //     }
+    // }
+
+
+    const onSubmitHandler = async (e) => {
+        try {
+            e.preventDefault();
+
+            const otpArray = inputRefs.current.map(e => e.value);
+            const otp = otpArray.join("");
+
+            if (otp.length !== 6) {
+                return toast.error("Enter complete OTP");
+            }
+
+            const { data } = await axios.post(
+                "http://localhost:8000/alpha-gaming/verify-account",
+                {
+                    otp,
+                    userId: userData._id
+                },
+                { withCredentials: true }
+            );
+
+            if (data.status === 1) {
+                toast.success(data.message);
+                getUserData();
+                navigate("/");
+            } else {
+                toast.error(data.message);
+            }
+
+        } catch (error) {
+            toast.error(error.response?.data?.message || "Something went wrong");
+        }
+    };
+
+    useEffect(()=>{
+        userData && userData.isAccountVerified && navigate("/")
+    },[userData])
+
+    return (
+        <div className='otpBoxContainer'>
+            <form onSubmit={onSubmitHandler}>
+                <div className="otpBox">
+                    <h1>Verify Your Email</h1>
+                    <p>Enter 6-digit code sent to your Email.</p>
+                    <div className="otp" onPaste={handlePaste}>
+
+                        {Array(6).fill(0).map((_, index) => (
+                            <input type="text" maxLength={1} required className='otpInput' key={index} ref={e => inputRefs.current[index] = e}
+                                onInput={(e) => handleInput(e, index)}
+                                onKeyDown={(e) => handleKeyDown(e, index)}
+
+                            />
+                        ))}
+
+                    </div>
+                    <button className='verify-email-btn' type='submit'>Verify Email</button>
+                </div>
+            </form>
+        </div>
+    )
+}

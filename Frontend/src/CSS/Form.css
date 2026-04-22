@@ -1,0 +1,238 @@
+.form-page {
+    height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(#0a0a0f80); */
+    /* background: linear-gradient(#000000e0, #0000005e, #0000004d); */
+    background: linear-gradient(#000000, #0000005e, #0000005e, #0a0a0fc9);
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.bg-video2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+
+.user-account-box {
+    width: 370px;
+    height: 480px;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(25px);
+    border: 1px solid gray;
+    border-radius: 14px;
+    transition: .4s all;
+
+}
+
+
+
+.user-account-box .form-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
+
+
+.user-account-box .form-name h2 {
+    cursor: pointer;
+}
+
+
+
+.user-account-box h2 {
+    text-align: center;
+}
+
+.user-account-box input {
+    width: 80%;
+    height: 46px;
+    padding: 1.1rem 1rem;
+    padding-right: 2.5rem;
+    margin-top: 1rem;
+    background: none;
+    color: #fff;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+}
+
+.user-account-box .input-password {
+    position: relative;
+}
+
+.user-account-box i {
+    position: absolute;
+    right: 78px;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.user-account-box p {
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.user-account-box .user-btn {
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    margin-top: 1.3rem;
+    cursor: pointer;
+    background: linear-gradient(115deg, #7f00ff, #e100ff, #fff);
+    padding: .7rem 1.5rem;
+    color: #fff;
+    transition: .4s all;
+    text-align: center;
+}
+
+.user-account-box .user-btn:hover {
+    color: #000;
+}
+
+.form-title {
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+
+
+.form-title.activeForm {
+    background: linear-gradient(135deg, #8000ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid #e100ff;
+}
+
+
+.signUpForm p span,
+.loginForm p span {
+    color: #a855f7;
+    cursor: pointer;
+}
+
+
+.signUpForm p a,
+.loginForm p a {
+    cursor: pointer;
+    color: #a855f7;
+}
+
+.user-account-box .line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(115deg, #7f00ff, #e100ff);
+    border: none;
+    /* transform: translateX(31%); */
+    margin-top: 10px;
+    /* transition: transform .6s; */
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.form-page-content {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+}
+
+.form-page-content h1 {
+    font-size: 50px;
+    /* font-family: Teko; */
+    font-family: "Germania One", system-ui;
+    opacity: 0.4;
+}
+
+.form-page-content h1 span {
+    position: relative;
+    color: #9e90ee;
+    background-color: black;
+    font-size: 55px;
+    border-radius: 20px;
+    padding: 0 5px;
+
+}
+
+@media (max-width: 1200px) {
+
+    .user-account-box {
+        margin: auto;
+        backdrop-filter: blur(1px);
+        position: relative;
+        background: linear-gradient(#16161657, #00000054);
+    }
+
+    .user-account-box input {
+        backdrop-filter: blur(20px);
+    }
+
+    .user-account-box input::placeholder {
+        color: #fff;
+    }
+
+    .form-page-content {
+        position: absolute;
+        top: 80%;
+    }
+}
+
+@media (max-width: 788px) {
+    .user-account-box {
+        position: absolute;
+        left: 50%;
+
+    }
+
+    .form-page-content h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .form-page-content h1 span {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 580px) {
+    .form-page-content {
+        display: none;
+    }
+}
+
+
+@media (max-width: 470px) {
+    .user-account-box {
+        width: 300px;
+        padding: 2rem 0;
+        margin-top: 3rem;
+    }
+
+    .user-account-box i {
+        right: 45px;
+    }
+
+    .bg-video2 {
+        border-bottom-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+    }
+
+
+}

@@ -1,0 +1,380 @@
+.game-details-section {
+    width: 80%;
+    margin: auto;
+    padding: 12rem 3rem;
+}
+
+.upper-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.upper-content .details {
+    padding: 10px 0;
+    border-bottom: .1px solid rgb(46, 46, 46);
+}
+
+
+
+.upper-content .image img {
+    max-width: 580px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+
+}
+
+.upper-content .details .name {
+    font-size: 36px;
+
+}
+
+.upper-content .details .genre {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.upper-content .details .makers,
+.upper-content .details .platform {
+    font-weight: 600;
+    margin: 2px 0;
+
+}
+
+.upper-content .details .ratings {
+    font-size: 20px;
+}
+
+.upper-content .details .ratings i {
+    color: goldenrod;
+    margin: 15px 0;
+}
+
+.upper-content .details .product-price {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* buttons*/
+
+.upper-content .details .addToCartBtn,
+.upper-content .details .buyNowBtn {
+    width: 50%;
+    height: 40px;
+    color: #fff;
+    margin: 4px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #7f00ff;
+
+
+}
+
+/* addToCartBtn */
+
+.upper-content .details .addToCartBtn {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(135deg, #ffffffe0, #7f00ff, #e100ff);
+}
+
+
+.upper-content .details .addToCartBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.upper-content .details .addToCartBtn:hover::before {
+    left: 0;
+}
+
+/* buyNowBtn */
+
+.upper-content .details .buyNowBtn {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(135deg, #7f00ff, #e100ff, #ffffffe0);
+}
+
+
+.upper-content .details .buyNowBtn::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.upper-content .details .buyNowBtn:hover::before {
+    bottom: 0;
+}
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* Modal Box */
+.modal-content {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.7);
+    animation: scaleUp 0.3s ease;
+    padding: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+    z-index: 10;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+/* Button */
+.upper-content .details .trailer-btn {
+    margin: 4px 0;
+    padding: 10px 20px;
+    width: 50%;
+    border: none;
+    font-size: 14px;
+    border: 1px solid #7f00ff;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    background: #000;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.upper-content .details .trailer-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #7f00ff, #ffffffe0, #e100ff);
+    transition: 0.5s;
+    z-index: -1;
+
+
+}
+
+.upper-content .details .trailer-btn:hover::before {
+    right: 0;
+
+}
+
+.upper-content .details .trailer-btn:hover {
+    color: #000;
+}
+
+
+
+/* Animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.warning {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 193, 7, 0.15);
+    border-left: 4px solid #ffc107;
+    color: #e6b800;
+    font-size: 14px;
+}
+
+/* lower-content */
+
+.lower-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 5rem 0;
+    padding: 20px 0;
+    border-bottom: .1px solid rgb(46, 46, 46);
+}
+
+.lower-content h2 {
+    margin-bottom: 6px;
+}
+
+.lower-content .game-description,
+.lower-content .requirements {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.lower-content p {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
+/* screenshots-content */
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.screenshots-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.screenshots-container .screenshots {
+    display: flex;
+    justify-content: center;
+}
+
+.screenshots-container .screenshots img {
+    width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(83, 90, 199, 0.3);
+}
+
+
+
+
+@media(max-width:1320px) {
+
+    .upper-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+
+    .upper-content .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .upper-content .image img {
+        width: 80%;
+        max-width: none;
+    }
+
+    .upper-content .details .genre {
+        justify-content: center;
+    }
+}
+
+@media(max-width:1500px) {
+    .warning {
+        display: none;
+    }
+
+    .screenshots-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:1035px) {
+    .lower-content {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media(max-width:970px) {
+    .screenshots-container .screenshots img {
+        width: 100%;
+    }
+}
+
+@media(max-width:800px) {
+    .game-details-section {
+        padding: 12rem 1rem;
+    }
+}
+
+@media(max-width:600px) {
+    .game-details-section {
+        padding: 10rem 0;
+    }
+
+    .upper-content .details .name {
+        font-size: 30px;
+    }
+
+    .upper-content .details .addToCartBtn,
+    .upper-content .details .buyNowBtn,
+    .upper-content .details .trailer-btn {
+        width: 100%;
+    }
+}
+
+@media(max-width:430px){
+
+    .upper-content .image img {
+        width: 100%;
+    }
+
+    .upper-content .details .name {
+        font-size: 27px;
+    }
+
+    .lower-content .game-description, .lower-content .requirements {
+        padding-right: 0;
+    }
+}

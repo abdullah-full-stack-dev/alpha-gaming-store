@@ -1,0 +1,21 @@
+.scroll-btn {
+    cursor: pointer;
+    right: 1.6rem;
+    position: fixed;
+    bottom: 2rem;
+    z-index: 999;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+    border: none;
+    outline: none;
+    padding: 7px 11px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(225, 0, 255, 0.6);
+    transition: all 0.3s ease;
+
+}
+
+.scroll-btn :hover {
+    box-shadow: 0 0 20px rgba(225, 0, 255, 1);
+}

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  font-family: Poppins, sans-serif;
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: "Outfit", sans-serif; */
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  -webkit-tap-highlight-color:transparent;
+
+}
+
+::-webkit-scrollbar {
+  height: .1rem;
+  width: .4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, #fff, #9831ff, #ea6efa, #fff);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8000ff;
+  border-radius: 5rem;
+}
+
+:focus {
+  outline: none;
+}
+
+
+body {
+  background: #0a0a0f;
+  color: #fff;
+  position: relative;
+}
+
+p{
+  font-weight: 300;
+}
+
