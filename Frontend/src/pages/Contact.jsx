@@ -5,22 +5,6 @@ import { toast } from 'react-toastify';
 
 export const Contact = () => {
 
-    // let saveEnquiry = (e)=>{
-    //     e.preventDefault();
-
-    //     let contactFormData = {
-    //         name: e.target.name.value,
-    //         email: e.target.email.value,
-    //         message: e.target.message.value
-    //     }
-
-    //     axios.post(`http://localhost:8000/alpha-gaming/insert`, contactFormData).then((res)=>{
-    //         console.log(res.data);
-            
-    //     })
-
-    // }
-
 
     const [contactForm, setContactForm] = useState({
         name:"",
@@ -38,7 +22,7 @@ export const Contact = () => {
       const saveEnquiry = async (e) => {
         e.preventDefault();
     
-        axios.post(`http://localhost:8000/alpha-gaming/insert`, contactForm).then((res) => {
+        axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/insert`, contactForm).then((res) => {
           console.log(res.data);
     
             setContactForm({

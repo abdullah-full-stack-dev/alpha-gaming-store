@@ -8,19 +8,6 @@ import { toast } from 'react-toastify'
 
 export const Footer = () => {
 
-    // let saveEnquiry = (e)=>{
-    //     e.preventDefault();
-
-    //     let newsLetterData = {
-    //         email: e.target.email.value
-    //     }
-
-    //     axios.post(`http://localhost:8000/alpha-gaming/insert-subscription`, newsLetterData).then((res)=>{
-    //         console.log(res.data);
-            
-    //     })
-
-    // }
 
     const [newsLetter, setNewsLetter] = useState({
         name: "",
@@ -38,7 +25,7 @@ export const Footer = () => {
       const saveEnquiry = async (e) => {
         e.preventDefault();
     
-        axios.post(`http://localhost:8000/alpha-gaming/insert-subscription`, newsLetter).then((res) => {
+        axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/insert-subscription`, newsLetter).then((res) => {
           console.log(res.data);
     
           setNewsLetter({

@@ -56,29 +56,6 @@ export const EmailVerify = () => {
         });
     };
 
-    // const onSubmitHandler = async (e) => {
-    //     try {
-
-    //         e.preventDefault();
-    //         const otpArray = inputRefs.current.map(e => e.value)
-    //         const otp = otpArray.join("")
-
-    //         const { data } = await axios.post(`http://localhost:8000/alpha-gaming/verify-account`, { otp }, { withCredentials: true })
-
-    //         if (data.status === 1) {
-    //             toast.success(data.message)
-    //             getUserData()
-    //             navigate("/")
-    //         } else {
-    //             toast.error(data.message)
-    //         }
-
-    //     } catch (error) {
-    //         // toast.error(error.message)
-    //         toast.error(error.response?.data?.message || "Something went wrong");
-
-    //     }
-    // }
 
 
     const onSubmitHandler = async (e) => {
@@ -93,7 +70,7 @@ export const EmailVerify = () => {
             }
 
             const { data } = await axios.post(
-                "http://localhost:8000/alpha-gaming/verify-account",
+                "https://alpha-gaming-store.onrender.com/alpha-gaming/verify-account",
                 {
                     otp,
                     userId: userData._id
@@ -110,7 +87,8 @@ export const EmailVerify = () => {
             }
 
         } catch (error) {
-            toast.error(error.response?.data?.message || "Something went wrong");
+            // toast.error(error.response?.data?.message || "Something went wrong");
+            toast.error(error.message)
         }
     };
 

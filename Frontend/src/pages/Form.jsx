@@ -39,8 +39,8 @@ export const Form = () => {
     
     axios.defaults.withCredentials = true  // Sending Cookies
 
-    axios.post(`http://localhost:8000/alpha-gaming/register`, form).then((res) => {
-      console.log(res.data);
+    axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/register`, form).then((res) => {
+      // console.log(res.data);
 
       if (res.data.message === "User Already Exists") {
         toast.warning("Email already exists!")
@@ -81,7 +81,7 @@ export const Form = () => {
 
     axios.defaults.withCredentials = true  // Sending Cookies
 
-    axios.post(`http://localhost:8000/alpha-gaming/login`, loginForm).then((res) => {
+    axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/login`, loginForm).then((res) => {
       console.log(res.data);
       if (res.data.message === "Invalid email" || res.data.message === "Invalid password") {
         toast.error("Invalid email or password")

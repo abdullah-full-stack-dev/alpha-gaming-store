@@ -14,11 +14,11 @@ const AuthProvider = ({ children }) => {
         try {
             
 
-            const {data} = await axios.get("http://localhost:8000/alpha-gaming/user/data", { withCredentials: true });
+            const {data} = await axios.get("https://alpha-gaming-store.onrender.com/alpha-gaming/user/data", { withCredentials: true });
             data.status === 1 ? setUserData(data.userData) : ""
             
         } catch (error) {
-            toast.error(data.message)
+            toast.error(error.message)
         }
     }
 

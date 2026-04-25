@@ -46,7 +46,7 @@ export const ForgotPassword = () => {
         e.preventDefault();
 
         try {
-            const {data} = await axios.post("http://localhost:8000/alpha-gaming/send-reset-otp", {email})
+            const {data} = await axios.post("https://alpha-gaming-store.onrender.com/alpha-gaming/send-reset-otp", {email})
             data.status === 1 ? toast.success(data.message) : toast.error(data.message)
             data.status === 1 && setIsEmailSent(true)
         } catch (error) {
@@ -66,7 +66,7 @@ export const ForgotPassword = () => {
         e.preventDefault();
 
         try {
-            const {data} = await axios.post("http://localhost:8000/alpha-gaming/reset-password", {email,otp,newPassword})
+            const {data} = await axios.post("https://alpha-gaming-store.onrender.com/alpha-gaming/reset-password", {email,otp,newPassword})
             data.status === 1 ? toast.success(data.message) : toast.error(data.message)
             data.status === 1 && navigate("/account")
         } catch (error) {

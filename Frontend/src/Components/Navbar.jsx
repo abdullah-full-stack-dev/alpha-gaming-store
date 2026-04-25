@@ -21,7 +21,8 @@ export const Navbar = () => {
 
         try {
             axios.defaults.withCredentials = true  // Sending Cookies
-            const { data } = await axios.post(`http://localhost:8000/alpha-gaming/logout`)
+            const { data } = await axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/logout`)
+            console.log(data)
             if (data.status === 1) {
                 setUserData(false)
                 navigate("/")
@@ -37,7 +38,7 @@ export const Navbar = () => {
         try {
             axios.defaults.withCredentials = true;
 
-            const { data } = await axios.post(`http://localhost:8000/alpha-gaming/send-verify-otp`)
+            const { data } = await axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/send-verify-otp`)
             if (data.status === 1) {
                 navigate("/email-verify")
                 toast.success(data.message)
