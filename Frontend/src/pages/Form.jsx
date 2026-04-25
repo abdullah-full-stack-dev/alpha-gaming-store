@@ -40,7 +40,7 @@ export const Form = () => {
     axios.defaults.withCredentials = true  // Sending Cookies
 
     axios.post(`https://alpha-gaming-store.onrender.com/alpha-gaming/register`, form).then((res) => {
-      // console.log(res.data);
+      console.log(res.data);
 
       if (res.data.message === "User Already Exists") {
         toast.warning("Email already exists!")

@@ -32,10 +32,6 @@ export const Contact = () => {
             });
     
             toast.success("Your message has been sent successfully!")
-          
-    
-    
-    
     
         })
     

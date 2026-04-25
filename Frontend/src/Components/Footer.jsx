@@ -37,10 +37,6 @@ export const Footer = () => {
             setTimeout(() => {
                 navigate("/");
               }, 3500);
-          
-    
-    
-    
     
         })
     
