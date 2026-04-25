@@ -11,13 +11,12 @@ let app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://alpha-gaming-store.netlify.app"
-    ],
+    origin: "https://alpha-gaming-store.netlify.app",
     credentials: true
 }));
+
 app.use(cookieParser());
 app.use(express.json());
 
@@ -25,12 +24,12 @@ app.use(express.json());
 app.use("/alpha-gaming", alphaRouter);
 app.use("/alpha-gaming/user", userRouter);
 
-// ✅ START SERVER FIRST
+//  START SERVER FIRST
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
 });
 
-// ✅ THEN CONNECT DB
+//  THEN CONNECT DB
 mongoose.connect(process.env.DBURL)
     .then(() => {
         console.log(`connected to mongoDB with server ${process.env.DBURL}`);
