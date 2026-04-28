@@ -149,7 +149,7 @@ EMAIL_PASS=your_smtp_key
 
 ## 👨‍💻 Author
 
-* Abdullah Khan
+* Abdullah Khan (Full Stack Web Developer)
 
 ---
 
