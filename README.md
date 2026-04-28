@@ -18,24 +18,34 @@ Built with a modern full-stack architecture using React and Node.js.
 
 ## 🛠️ Tech Stack
 
-### Frontend
+### 🚀 Frontend
 
-* React.js
-* Context API
-* Axios
-* CSS
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge\&logo=axios\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-264de4?style=for-the-badge\&logo=css3\&logoColor=white)
 
-### Backend
+---
 
-* Node.js
-* Express.js
-* MongoDB
-* JWT Authentication
-* Bcrypt.js
+### 🧠 Backend
 
-### Services
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge\&logo=express\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge\&logo=mongodb\&logoColor=white)
 
-* Brevo (Email OTP Service)
+---
+
+### 🔐 Authentication & Security
+
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge\&logo=JSON%20web%20tokens)
+![Bcrypt](https://img.shields.io/badge/Bcrypt-003A8F?style=for-the-badge\&logo=security\&logoColor=white)
+
+---
+
+### 💳 Services
+
+![Razorpay](https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge\&logo=razorpay\&logoColor=3395FF)
+![Brevo](https://img.shields.io/badge/Brevo-0B996E?style=for-the-badge)
+
 
 ---
 
