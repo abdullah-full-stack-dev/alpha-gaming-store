@@ -112,6 +112,12 @@ EMAIL_PASS=your_smtp_key
 ### 📦 Collection Page
 ![Collection](Frontend/src/assets/screenshots/collection.PNG)
 
+### 🎮 Game Details Page
+![Game Details](Frontend/src/assets/screenshots/game-details.PNG)
+
+### 🛒 Cart Page
+![Cart](Frontend/src/assets/screenshots/cart.PNG)
+
 ---
 
 ## 👨‍💻 Author
