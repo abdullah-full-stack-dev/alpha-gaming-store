@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import '../CSS/Home.css'
-// import { ReactTyped } from "react-typed";
 import backVideo from "../assets/videos/home-background.mp4" // HomePage-background-video
 import char from "../assets/images/char.png"
 import secondaryImage from "../assets/images/home-secondary-image.jpg"
@@ -11,10 +10,15 @@ import firstlight from "../assets/images/firstLight.jpg"
 import { HomeProducts } from '../Components/HomeProducts'
 import { Link, NavLink } from 'react-router-dom'
 import Typed from 'typed.js';
+import { AuthContext } from '../../context/AppContext'
 
 export const Home = () => {
 
+
+
     const el = useRef(null);
+
+    const { userData } = useContext(AuthContext)
 
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -59,7 +63,14 @@ export const Home = () => {
 
                         <div className="home-btn-container">
                             <div className="home-btn">
-                                <NavLink to={"/account"} className='Link' ><button className="btn-alpha"><i className="fa-solid fa-archway"></i> Enter Alpha</button></NavLink>
+                                {userData
+                                    ?
+                                    <NavLink to={"/about"} className='Link' ><button className="btn-alpha"><i className="fa-solid fa-archway"></i> Explore Alpha</button></NavLink>
+                                    :
+                                    <NavLink to={"/account"} className='Link' ><button className="btn-alpha"><i className="fa-solid fa-archway"></i> Enter Alpha</button></NavLink>
+
+                                }
+
                                 <NavLink to={"/collections"} className='Link' ><button className="btn-discover"><i className="fa-solid fa-bag-shopping"></i> Shop Games</button></NavLink>
                             </div>
                         </div>
@@ -96,7 +107,7 @@ export const Home = () => {
                         <div className="hero-buttons">
                             <Link to={"/collections"} className='Link' ><button className="btn primary2"><i className="fa-solid fa-globe"></i> Explore Games</button></Link>
                             <Link to="/collections#new-released"><button className="btn secondary2"><i className="fa-solid fa-fire"></i> New Released</button></Link>
-                            
+
                         </div>
                     </div>
 

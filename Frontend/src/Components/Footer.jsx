@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import '../CSS/Footer.css'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import logo from "../assets/images/logo3.png"
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
 
 export const Footer = () => {
+
+    const navigate = useNavigate();
 
 
     const [newsLetter, setNewsLetter] = useState({

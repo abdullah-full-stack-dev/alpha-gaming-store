@@ -4,9 +4,7 @@ import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
-
-   
+const AuthProvider = ({ children }) => {  
 
     const [userData, setUserData] = useState(false);
 
