@@ -109,6 +109,9 @@ EMAIL_PASS=your_smtp_key
 ### 🏠 Home Page
 ![Home](Frontend/src/assets/screenshots/home.PNG)
 
+### 📦 Collection Page
+![Collection](Frontend/src/assets/screenshots/collection.PNG)
+
 ---
 
 ## 👨‍💻 Author
