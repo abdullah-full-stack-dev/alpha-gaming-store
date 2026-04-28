@@ -43,7 +43,6 @@ Built with a modern full-stack architecture using React and Node.js.
 
 ### 💳 Services
 
-![Razorpay](https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge\&logo=razorpay\&logoColor=3395FF)
 ![Brevo](https://img.shields.io/badge/Brevo-0B996E?style=for-the-badge)
 
 
