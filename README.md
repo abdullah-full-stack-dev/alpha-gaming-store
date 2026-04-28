@@ -107,7 +107,7 @@ EMAIL_PASS=your_smtp_key
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](assets/screenshots/home.png)
+![Home](assets/screenshots/home.PNG)
 
 ---
 
