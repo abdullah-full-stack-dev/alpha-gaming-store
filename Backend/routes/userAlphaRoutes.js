@@ -3,6 +3,7 @@ const { userDetailInsert } = require("../controller/userContactController");
 const { newsLetterInsert } = require("../controller/userNewsLetterController");
 const { register, login, logout, sendVerifyOtp, verifyEmail, isAuthenticated, resetPassword, sendResetOtp } = require("../controller/authController");
 const userAuth = require("../middleware/userAuth");
+const processPayment = require("../controller/productController");
 let alphaRouter = express.Router();
 
 alphaRouter.post("/insert",userDetailInsert)
@@ -18,6 +19,9 @@ alphaRouter.post("/is-auth",userAuth, isAuthenticated);
 
 alphaRouter.post("/send-reset-otp", sendResetOtp);
 alphaRouter.post("/reset-password", resetPassword);
+
+// Razorpay Integretion API
+alphaRouter.post("/payment/process", processPayment);
 
 
 

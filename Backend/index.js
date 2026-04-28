@@ -24,6 +24,7 @@ app.use(express.json());
 app.use("/alpha-gaming", alphaRouter);
 app.use("/alpha-gaming/user", userRouter);
 
+
 //  START SERVER FIRST
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
