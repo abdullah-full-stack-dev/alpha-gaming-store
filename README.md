@@ -118,6 +118,24 @@ EMAIL_PASS=your_smtp_key
 ### 🛒 Cart Page
 ![Cart](Frontend/src/assets/screenshots/cart.PNG)
 
+### 💳 Checkout Page
+![Checkout](Frontend/src/assets/screenshots/checkout.PNG)
+
+---
+
+### 💳 Authentication Page
+![Authentication](Frontend/src/assets/screenshots/signup-login.PNG)
+
+---
+
+### 📄 Additional Pages
+
+### ℹ️ About Page
+![Additional](Frontend/src/assets/screenshots/about.PNG)
+
+### 📞 Contact Page
+![Contact](Frontend/src/assets/screenshots/contact.PNG)
+
 ---
 
 ## 👨‍💻 Author
